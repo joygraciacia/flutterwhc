@@ -1,0 +1,62 @@
+// Copyright 2017 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+import 'package:flutter/material.dart';
+// Comment out lines 7 and 10 to suppress the visual layout at runtime.
+//import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
+
+void main() {
+//  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Travel Gallery'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset('images/image1.png'),
+            Image.asset('images/image2.png'),
+            Image.asset('images/image3.png'),
+            //Image.asset('images/image4.png'),
+            //Image.asset('images/image5.png'),
+            //Image.asset('images/image6.png'),
+            //Image.asset('images/image7.png'),
+            //Image.asset('images/image8.png'),
+            //Image.asset('images/image9.png'),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
